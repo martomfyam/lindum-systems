@@ -1,6 +1,6 @@
 <?php
 
-$getImage=mysqli_query($conn, "SELECT * FROM products WHERE new ='yes' ") or die("Could not retrieve image: " .mysqli_error($conn));
+$getImage=mysqli_query($conn, "SELECT * FROM products WHERE new ='yes' ORDER by timeUpdated ASC ") or die("Could not retrieve image: " .mysqli_error($conn));
 
 //$path=mysqli_fetch_assoc($getImage) or die("Could not fetch array : " .mysqli_error($conn));
 $y=1;
@@ -9,6 +9,7 @@ while($row = mysqli_fetch_assoc($getImage)) {
     if ($y == $x) {
         $name = $row['itemName'];
         $category = $row['category'];
+        $subCategory = $row['subCategory'];
         $price = $row['price'];
         $discount = $row['discount'];
         $rating = $row['rating'];

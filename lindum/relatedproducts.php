@@ -14,6 +14,7 @@ while($row = mysqli_fetch_assoc($getImage)){
         } else {
             $name = $row['itemName'];
             $category = $row['category'];
+            $subCategory = $row['subCategory'];
             $price = $row['price'];
             $discount = $row['discount'];
             $rating = $row['rating'];

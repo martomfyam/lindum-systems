@@ -44,14 +44,15 @@ session_start();
 
 ?>
 <!-- HEADER -->
+<div class="allheader" >
 <header>
     <!-- TOP HEADER -->
     <div id="top-header">
         <div class="container">
             <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +254726051500</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> info@lindumsystems.co.ke</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Kisumu, Oginga Odinga Street, Tivoli plaza, ground floor</a></li>
+                <li><a href="tel:+254726051500" target="_blank" rel="noopener"><i class="fa fa-phone" ></i> +254726051500</a></li>
+                <li><a href="mailto:info@lindumsystems.co.ke" target="_blank" rel="noopener"><i class="fa fa-envelope-o"></i> info@lindumsystems.co.ke</a></li>
+                <li><a href="https://goo.gl/maps/trQH43peu2K2" target="-_blank" rel="noopener"><i class="fa fa-map-marker"></i> Kisumu, Amalo HSE,1st floor (Next to Guardian Booking Office)</a></li>
             </ul>
 
         </div>
@@ -68,7 +69,7 @@ session_start();
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <a href="index.php"><img src="./img/logo.png" alt="" height="120" width="290" ></a>
+                            <a href="index.php" rel="noopener noreferrer"><img src="./img/logo.png" alt="lindum systems limited" height="130" width="160" ></a>
                         </a>
                     </div>
                 </div>
@@ -81,13 +82,13 @@ session_start();
 
                         <form method="post" action="store.php">
                             <select name="category" class="input-select">
-                                <option value="0">All Categories</option>
-                                <option value="1">CCTV Services</option>
-                                <option value="2">Fire Safety </option>
-                                <option value="3">Electric Fencing</option>
-                                <option value="4">Alarms </option>
-                                <option value="4">Access Control </option>
-                                <option value="4">Intercoms </option>
+                                <option value=0>All Categories</option>
+                                <option value="cctv camera">CCTV Services</option>
+                                <option value=2>Fire Safety </option>
+                                <option value=3>Electric Fencing</option>
+                                <option value=4>Alarms </option>
+                                <option value=5>Access Control </option>
+                                <option value=6>Intercoms </option>
                             </select>
                             <input class="input" name="search" placeholder="Search here">
                             <button class="search-btn">Search</button>
@@ -104,6 +105,7 @@ session_start();
     </div>
     <!-- /MAIN HEADER -->
 </header>
+</div>
 <!-- /HEADER -->
 
 <!-- NAVIGATION -->
@@ -112,15 +114,15 @@ session_start();
     <div class="container">
         <!-- responsive-nav -->
         <div class="topnav" id="myTopnav">
-            <a href="index.php" class="active">HOME</a>
+            <a href="index.php" class="active" rel="noopener">HOME</a>
             <div class="dropdown1">
                 <button class="dropbtn1">CCTV SYSTEMS
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown1-content">
-                    <a href="store.php?category=<?php echo "cctv"; ?>">IR/Antique systems</a>
-                    <a href="store.php?category=<?php echo "cctv"; ?>">IP Camera systems</a>
-                    <a href="store.php?category=<?php echo "cctv"; ?>">Spy Cameras</a>
+                    <a href="store.php?category=<?php echo "IR camera"; ?>"  rel="noopener noreferrer">IR/Antique systems</a>
+                    <a href="store.php?category=<?php echo "ip camera"; ?>"  rel="noopener noreferrer">IP Camera systems</a>
+                    <a href="store.php?category=<?php echo "spy camera"; ?>" rel="noopener noreferrer">Spy Cameras</a>
                 </div>
             </div>
             <div class="dropdown1">
@@ -128,13 +130,13 @@ session_start();
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown1-content">
-                    <a href="store.php?category=<?php echo "fire"; ?>">Portable extinguishers</a>
-                    <a href="store.php?category=<?php echo "fire"; ?>">Non-protable extinguishers</a>
-                    <a href="store.php?category=<?php echo "fire"; ?>">House reels & pumpset</a>
-                    <a href="store.php?category=<?php echo "fire"; ?>">Fire alarm systems</a>
-                    <a href="store.php?category=<?php echo "fire"; ?>">Fire suppression systems</a>
-                    <a href="store.php?category=<?php echo "fire"; ?>">Fire sprinkler systems</a>
-                    <a href="store.php?category=<?php echo "fire"; ?>">Hydrants</a>
+                    <a href="store.php?category=<?php echo "portable"; ?>" rel="noopener noreferrer">Portable extinguishers</a>
+                    <a href="store.php?category=<?php echo "Non-portable"; ?>"  rel="noopener noreferrer">Non-portable extinguishers</a>
+                    <a href="store.php?category=<?php echo "Hose reel"; ?>"  rel="noopener noreferrer">Hose reels & pumpset</a>
+                    <a href="store.php?category=<?php echo "Fire alarm systems"; ?>"  rel="noopener noreferrer">Fire alarm systems</a>
+                    <a href="store.php?category=<?php echo "Fire suppression systems"; ?>"  rel="noopener noreferrer">Fire suppression systems</a>
+                    <a href="store.php?category=<?php echo "Fire sprinkler systems"; ?>" rel="noopener noreferrer">Fire sprinkler systems</a>
+                    <a href="store.php?category=<?php echo "Hydrants"; ?>"  rel="noopener noreferrer">Hydrants</a>
                 </div>
             </div>
             <div class="dropdown1">
@@ -142,10 +144,10 @@ session_start();
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown1-content">
-                    <a href="store.php?category=<?php echo "alarm"; ?>">Control panel</a>
-                    <a href="store.php?category=<?php echo "alarm"; ?>">Intruder Alarm systems</a>
-                    <a href="store.php?category=<?php echo "alarm"; ?>">Transmitters</a>
-                    <a href="store.php?category=<?php echo "alarm"; ?>">Motion Detectors</a>
+                    <a href="store.php?category=<?php echo "Control panel"; ?>"  rel="noopener noreferrer">Control panel</a>
+                    <a href="store.php?category=<?php echo "Intruder Alarm systems"; ?>" rel="noopener noreferrer">Intruder Alarm systems</a>
+                    <a href="store.php?category=<?php echo "Transmitters"; ?>"  rel="noopener noreferrer">Transmitters</a>
+                    <a href="store.php?category=<?php echo "Motion Detectors"; ?>"  rel="noopener noreferrer">Motion Detectors</a>
 
 
                 </div>
@@ -155,10 +157,10 @@ session_start();
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown1-content">
-                    <a href="store.php?category=<?php echo "access control"; ?>">Access Control</a>
-                    <a href="store.php?category=<?php echo "access control"; ?>">Electric fencing</a>
-                    <a href="store.php?category=<?php echo "access control"; ?>">Intercoms</a>
-                    <a href="store.php?category=<?php echo "access control"; ?>">Extensium phones(P.A.B.X)</a>
+                    <a href="store.php?category=<?php echo "access control"; ?>"  rel="noopener noreferrer">Access Control</a>
+                    <a href="store.php?category=<?php echo "Electric fencing"; ?>"  rel="noopener noreferrer">Electric fencing</a>
+                    <a href="store.php?category=<?php echo "Intercoms"; ?>"  rel="noopener noreferrer">Intercoms</a>
+                    <a href="store.php?category=<?php echo "pabx"; ?>"  rel="noopener noreferrer">Extensium phones(P.A.B.X)</a>
 
                 </div>
             </div>
@@ -167,13 +169,14 @@ session_start();
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown1-content">
-                    <a href="aboutus.php">ABOUT US</a>
-                    <a href="contactus.php">CONTACT US</a>
+                    <a href="aboutus.php"  rel="noopener noreferrer">ABOUT US</a>
+                    <a href="contactus.php"  rel="noopener noreferrer">CONTACT US</a>
+                    <a href="https://lindumsystems.co.ke/blog"  rel="noopener noreferrer">OUR BLOG</a>
 
                 </div>
             </div>
 
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()" rel="noopener noreferrer">&#9776;</a>
         </div>
         <!-- /responsive-nav -->
     </div>
@@ -189,8 +192,8 @@ session_start();
         <div class="row">
             <div class="col-md-12">
                 <ul class="breadcrumb-tree">
-                    <li><a href="index.php">Home</a></li>
-                    <li class="active"> <a href="store.php"> All Categories </a> </li>
+                    <li><a href="index.php" rel="noopener noreferrer nofollow">Home</a></li>
+                    <li class="active"> <a href="store.php" rel="noopener noreferrer" > All Categories </a> </li>
 
                 </ul>
             </div>
@@ -208,15 +211,15 @@ session_start();
         <!-- row -->
         <div class="row">
             <!-- ASIDE -->
-            <div id="aside" class="col-md-3">
+            <div id="aside" class="col-md-3" >
                 <!-- aside Widget -->
                 <div class="aside">
                     <h3 class="aside-title">Categories</h3>
                     <div class="checkbox-filter">
-                    <?php
-                    $query = mysqli_query($conn,"SELECT * FROM products WHERE category = 'cctv' ") or die("could not search!");
-                    $count = mysqli_num_rows($query);
-                    ?>
+                        <?php
+                        $query = mysqli_query($conn,"SELECT * FROM products WHERE category = 'cctv' ") or die("could not search!");
+                        $count = mysqli_num_rows($query);
+                        ?>
                         <div class="input-checkbox">
                             <input type="checkbox" id="category-1">
                             <label for="category-1">
@@ -297,85 +300,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <!-- /aside Widget -->
 
-                <!-- aside Widget -->
-<!--                <div class="aside">-->
-<!--                    <h3 class="aside-title">Price</h3>-->
-<!--                    <div class="price-filter">-->
-<!--                        <div id="price-slider"></div>-->
-<!--                        <div class="input-number price-min">-->
-<!--                            <input id="price-min" type="number">-->
-<!--                            <span class="qty-up">+</span>-->
-<!--                            <span class="qty-down">-</span>-->
-<!--                        </div>-->
-<!--                        <span>-</span>-->
-<!--                        <div class="input-number price-max">-->
-<!--                            <input id="price-max" type="number">-->
-<!--                            <span class="qty-up">+</span>-->
-<!--                            <span class="qty-down">-</span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <!-- /aside Widget -->
-
-                <!-- aside Widget -->
-<!--                <div class="aside">-->
-<!--                    <h3 class="aside-title">Brand</h3>-->
-<!--                    <div class="checkbox-filter">-->
-<!--                        <div class="input-checkbox">-->
-<!--                            <input type="checkbox" id="brand-1">-->
-<!--                            <label for="brand-1">-->
-<!--                                <span></span>-->
-<!--                                SAMSUNG-->
-<!--                                <small>(578)</small>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <div class="input-checkbox">-->
-<!--                            <input type="checkbox" id="brand-2">-->
-<!--                            <label for="brand-2">-->
-<!--                                <span></span>-->
-<!--                                LG-->
-<!--                                <small>(125)</small>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <div class="input-checkbox">-->
-<!--                            <input type="checkbox" id="brand-3">-->
-<!--                            <label for="brand-3">-->
-<!--                                <span></span>-->
-<!--                                SONY-->
-<!--                                <small>(755)</small>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <div class="input-checkbox">-->
-<!--                            <input type="checkbox" id="brand-4">-->
-<!--                            <label for="brand-4">-->
-<!--                                <span></span>-->
-<!--                                SAMSUNG-->
-<!--                                <small>(578)</small>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <div class="input-checkbox">-->
-<!--                            <input type="checkbox" id="brand-5">-->
-<!--                            <label for="brand-5">-->
-<!--                                <span></span>-->
-<!--                                LG-->
-<!--                                <small>(125)</small>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <div class="input-checkbox">-->
-<!--                            <input type="checkbox" id="brand-6">-->
-<!--                            <label for="brand-6">-->
-<!--                                <span></span>-->
-<!--                                SONY-->
-<!--                                <small>(755)</small>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <!-- /aside Widget -->
-
-                <!-- aside Widget -->
                 <div class="aside">
                     <h3 class="aside-title">Top selling</h3>
                     <?php include 'databaseconn.php' ?>
@@ -390,7 +315,7 @@ session_start();
                         </div>
                         <div class="product-body">
                             <p class="product-category"><?php echo $category; ?></p>
-                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh ".$oldprice; ?></del></h4>
 
                         </div>
@@ -409,7 +334,7 @@ session_start();
                         </div>
                         <div class="product-body">
                             <p class="product-category"><?php echo $category; ?></p>
-                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh ".$oldprice; ?></del></h4>
 
                         </div>
@@ -428,7 +353,7 @@ session_start();
                         </div>
                         <div class="product-body">
                             <p class="product-category"><?php echo $category; ?></p>
-                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh ".$oldprice; ?></del></h4>
 
                         </div>
@@ -444,7 +369,7 @@ session_start();
                         </div>
                         <div class="product-body">
                             <p class="product-category"><?php echo $category; ?></p>
-                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh ".$oldprice; ?></del></h4>
 
                         </div>
@@ -463,7 +388,7 @@ session_start();
                         </div>
                         <div class="product-body">
                             <p class="product-category"><?php echo $category; ?></p>
-                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh ".$oldprice; ?></del></h4>
 
                         </div>
@@ -482,7 +407,7 @@ session_start();
                         </div>
                         <div class="product-body">
                             <p class="product-category"><?php echo $category; ?></p>
-                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh ".$oldprice; ?></del></h4>
 
                         </div>
@@ -518,7 +443,7 @@ session_start();
                     </div>
                     <ul class="store-grid">
                         <li class="active"><i class="fa fa-th"></i></li>
-                        <li><a href="#"><i class="fa fa-th-list"></i></a></li>
+                        <li><a href="#" rel="noopener noreferrer"><i class="fa fa-th-list"></i></a></li>
                     </ul>
                 </div>
                 <!-- /store top filter -->
@@ -531,9 +456,27 @@ session_start();
                     if(isset($_POST['search'])){
                         $searchq = $_POST['search'];
                         $category = $_POST['category'];
+
+                        if($category==0){
+                            $category ="";
+                        } else if($category==1){
+                            $category= "cctv";
+                        } else if($category==2){
+                            $category= "fire";
+                        } else if($category==3){
+                            $category= "electric fencing";
+                        } else if($category==4){
+                            $category= "alarm";
+                        } else if($category==5){
+                            $category= "access control";
+                        } else if($category==6){
+                            $category= "intercoms";
+                        }
+
+
                         $searchq = preg_replace("#[^0-9a-z]#i","",$searchq);
 
-                        $query = mysqli_query($conn,"SELECT * FROM products WHERE category = '$category' and itemName like '%$searchq%' or category like '%$searchq%' ") or die("could not search!");
+                        $query = mysqli_query($conn,"SELECT * FROM products WHERE category = '$category' and itemName like '%$searchq%' or category like '%$searchq%' or subCategory like '%$searchq%' ") or die("could not search!");
                         $count = mysqli_num_rows($query);
 
                         if ($count == 0){
@@ -544,6 +487,7 @@ session_start();
                             while($row = mysqli_fetch_array($query)){
                                 $name = $row['itemName'];
                                 $category = $row['category'];
+                                $subCategory = $row['subCategory'];
                                 $price = $row['price'];
                                 $discount = $row['discount'];
                                 $rating = $row['rating'];
@@ -562,9 +506,9 @@ session_start();
                                 ?>
 
                                 <!-- product -->
-                                <div class="col-md-4 col-xs-6">
-                                    <div class="product" id="<?php echo $name; ?>" onClick="reply_click(this.id)">
-                                        <div class="product-img"  >
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="product" >
+                                        <div class="product-img" id="<?php echo $name; ?>" onClick="reply_click(this.id)"  >
                                             <img src="<?php echo $link;?>" height="240"/>
                                             <!--										<img src="./img/product01.png" alt="">-->
                                             <div class="product-label">
@@ -572,9 +516,10 @@ session_start();
                                                 <span class="new">NEW</span>
                                             </div>
                                         </div>
-                                        <div class="product-body">
-                                            <p class="product-category"><?php echo $category; ?></p>
-                                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                                        <div class="product-body" id="<?php echo $name; ?>" onClick="reply_click(this.id)">
+
+                                            <p class="product-category"><?php echo $subCategory  ; ?></p>
+                                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh".$oldprice; ?></del></h4>
                                             <div class="product-rating">
                                                 <i class="fa fa-star"></i>
@@ -590,7 +535,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="add-to-cart">
-                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                            <button class="add-to-cart-btn" formtarget="_blank" id="<?php echo $name; ?>" onclick="clickeditem(this.id)"  > <i class="fa fa-shopping-cart"></i> purchase</button>
                                         </div>
                                     </div>
                                 </div>
@@ -606,17 +551,18 @@ session_start();
 
                         $category = $_GET['category'];
 
-                        $query = mysqli_query($conn,"SELECT * FROM products WHERE category = '$category' ") or die("could not search!");
+                        $query = mysqli_query($conn,"SELECT * FROM products WHERE subCategory like '%$category%' or category like '%$category%' ") or die("could not search!");
                         $count = mysqli_num_rows($query);
 
                         if ($count == 0){
-                            echo "Their was no search results for '".$searchq."'";
+                            echo "Their was no search results for '".$category."'";
 
                         } else{
 
                             while($row = mysqli_fetch_array($query)){
                                 $name = $row['itemName'];
                                 $category = $row['category'];
+                                $subCategory = $row['subCategory'];
                                 $price = $row['price'];
                                 $discount = $row['discount'];
                                 $rating = $row['rating'];
@@ -635,19 +581,20 @@ session_start();
                                 ?>
 
                                 <!-- product -->
-                                <div class="col-md-4 col-xs-6">
-                                    <div class="product" id="<?php echo $name; ?>" onClick="reply_click(this.id)">
-                                        <div class="product-img" >
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="product" >
+                                        <div class="product-img" id="<?php echo $name; ?>" onClick="reply_click(this.id)" >
                                             <img src="<?php echo $link;?>" height="240"/>
                                             <!--										<img src="./img/product01.png" alt="">-->
-                                            <div class="product-label">
+                                            <div class="product-label" >
                                                 <span class="sale"><?php if($discpercentage>0){ echo "-".$discpercentage;} ?> </span>
                                                 <span class="new">NEW</span>
                                             </div>
                                         </div>
-                                        <div class="product-body">
-                                            <p class="product-category"><?php echo $category; ?></p>
-                                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                                        <div class="product-body" id="<?php echo $name; ?>" onClick="reply_click(this.id)" >
+
+                                            <p class="product-category"><?php echo $subCategory  ; ?></p>
+                                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh".$oldprice; ?></del></h4>
                                             <div class="product-rating">
                                                 <i class="fa fa-star"></i>
@@ -663,7 +610,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="add-to-cart">
-                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                            <button class="add-to-cart-btn" formtarget="_blank" id="<?php echo $name; ?>" onclick="clickeditem(this.id)"  > <i class="fa fa-shopping-cart"></i> purchase</button>
                                         </div>
                                     </div>
                                 </div>
@@ -690,6 +637,7 @@ session_start();
                             while($row = mysqli_fetch_array($query)){
                                 $name = $row['itemName'];
                                 $category = $row['category'];
+                                $subCategory = $row['subCategory'];
                                 $price = $row['price'];
                                 $discount = $row['discount'];
                                 $rating = $row['rating'];
@@ -708,9 +656,9 @@ session_start();
                                 ?>
 
                                 <!-- product -->
-                                <div class="col-md-4 col-xs-6">
-                                    <div class="product" id="<?php echo $name; ?>" onClick="reply_click(this.id)">
-                                        <div class="product-img" >
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="product" >
+                                        <div class="product-img" id="<?php echo $name; ?>" onClick="reply_click(this.id)">
                                             <img src="<?php echo $link;?>" height="240"/>
                                             <!--										<img src="./img/product01.png" alt="">-->
                                             <div class="product-label">
@@ -718,9 +666,10 @@ session_start();
                                                 <span class="new">NEW</span>
                                             </div>
                                         </div>
-                                        <div class="product-body">
-                                            <p class="product-category"><?php echo $category; ?></p>
-                                            <h3 class="product-name"><a href="#"><?php echo $name; ?></a></h3>
+                                        <div class="product-body" id="<?php echo $name; ?>" onClick="reply_click(this.id)">
+
+                                            <p class="product-category"><?php echo $subCategory  ; ?></p>
+                                            <h3 class="product-name"><a href="#" rel="noopener noreferrer" ><?php echo $name; ?></a></h3>
                                             <h4 class="product-price"><?php if ($price>0) echo "KSh ".$price; ?> <del class="product-old-price"><?php if($oldprice>$price) echo "Ksh".$oldprice; ?></del></h4>
                                             <div class="product-rating">
                                                 <i class="fa fa-star"></i>
@@ -736,7 +685,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="add-to-cart">
-                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                            <button class="add-to-cart-btn" formtarget="_blank" id="<?php echo $name; ?>" onclick="clickeditem(this.id)"  > <i class="fa fa-shopping-cart"></i> purchase</button>
                                         </div>
                                     </div>
                                 </div>
@@ -770,10 +719,10 @@ session_start();
                     <span class="store-qty">Showing products</span>
                     <ul class="store-pagination">
                         <li class="active">1</li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#" rel="noopener noreferrer" >2</a></li>
+                        <li><a href="#" rel="noopener noreferrer" >3</a></li>
+                        <li><a href="#" rel="noopener noreferrer">4</a></li>
+                        <li><a href="#" rel="noopener noreferrer" ><i class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
                 <!-- /store bottom filter -->
@@ -805,13 +754,13 @@ session_start();
                     </form>
                     <ul class="newsletter-follow">
                         <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/lindumsystems" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
                         </li>
 
                     </ul>
@@ -835,11 +784,12 @@ session_start();
                 <div class="col-md-4 col-xs-6">
                     <div class="footer">
                         <h3 class="footer-title">About Us</h3>
-                        <p>Lindum Systems limited main outlet is located in Kisumu Oginga Odinga street, Tivoli plaza, Ground Floor.</p>
                         <ul class="footer-links">
-                            <li><a href="#"><i class="fa fa-map-marker"></i>P.O Box 3335-40100, Kisumu</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i>+254726051500</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i>info@lindumsystems.co.ke</a></li>
+                            <li> <a href="https://goo.gl/maps/xb4H8GCCjCsqfsqr9" target="_blank"rel="noopener noreferrer"> Lindum Systems limited main outlet is located in Kisumu, Amalo HSE,1st floor (Next to Guardian Booking Office)</a></li>
+
+                            <li><a href="#" rel="noopener noreferrer" ><i class="fa fa-map-marker"></i>P.O Box 3335-40100, Kisumu</a></li>
+                            <li><a href="tel:+254726051500" target="_blank"rel="noopener noreferrer" ><i class="fa fa-phone"></i>+254726051500</a></li>
+                            <li><a href="mailto:info@lindumsystems.co.ke" target="_blank" rel="noopener noreferrer" ><i class="fa fa-envelope-o"></i>info@lindumsystems.co.ke</a></li>
 
                         </ul>
                     </div>
@@ -849,11 +799,11 @@ session_start();
                     <div class="footer">
                         <h3 class="footer-title">Categories</h3>
                         <ul class="footer-links">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="#">CCTV Systems</a></li>
-                            <li><a href="#">Fire Safety Equipments</a></li>
-                            <li><a href="#">Alarm Systems</a></li>
-                            <li><a href="#">Access control systems</a></li>
+                            <li><a href="index.php" rel="noopener noreferrer" >Home</a></li>
+                            <li><a href="store.php?category=cctv" rel="noopener noreferrer" >CCTV Systems</a></li>
+                            <li><a href="store.php?category=fire" rel="noopener noreferrer" >Fire Safety Equipments</a></li>
+                            <li><a href="store.php?category=alarm" rel="noopener noreferrer" >Alarm Systems</a></li>
+                            <li><a href="store.php?category=access control" rel="noopener noreferrer" >Access control systems</a></li>
 
                         </ul>
                     </div>
@@ -865,10 +815,10 @@ session_start();
                     <div class="footer">
                         <h3 class="footer-title">Information</h3>
                         <ul class="footer-links">
-                            <li><a href="aboutus.php">About Us</a></li>
-                            <li><a href="contactus.php">Contact Us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="aboutus.php" rel="noopener noreferrer" >About Us</a></li>
+                            <li><a href="contactus.php" rel="noopener noreferrer" >Contact Us</a></li>
+                            <li><a href="#" rel="noopener noreferrer" >Privacy Policy</a></li>
+                            <li><a href="#" rel="noopener noreferrer" >Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
@@ -887,13 +837,13 @@ session_start();
             <!-- row -->
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a href="index.php">	<img src="img/logo.png" width="169" height="70"/> </a>
+                    <a href="index.php" rel="noopener noreferrer" >	<img src="img/logo2.png" height="110" width="160"/> </a>
                     <p><i>securing through systems</i></p>
 
 
                     <span class="copyright">
 
-								Copyright &copy; 2018-<script>document.write(new Date().getFullYear());</script> <br> Marto Mfyam
+                                Copyright &copy; 2018-<script>document.write(new Date().getFullYear());</script> <br> <ul class="footer-links"><li><a href="https://www.martinmuthomi.co.ke" target="_blank" rel="noopener noreferrer nofollow" > Martin Muthomi </a> </li></ul>
 
 							</span>
                 </div>
@@ -919,6 +869,22 @@ session_start();
     {
         window.location.href="product.php?productName="+clicked_id+" ";
     }
+
+    function clickeditem(clicked_id){
+        var linkf = "<?php echo $_SERVER['PHP_SELF']; ?>";
+        var link = "https://www.lindumsystems.co.ke"+linkf+"?productName="+clicked_id;
+        var link = link.replace("index.php", "product.php");
+        var link = link.replace("store.php", "product.php");
+        var link = encodeURIComponent(link);
+        var productname = clicked_id;
+
+        var completetext =  encodeURI("hello lindum. i wish to place an order on '"+productname+"'. Thankyou. product link: (");
+        var completetext = completetext+link+")."
+
+        window.location.href="https://api.whatsapp.com/send?phone=254726051500&text="+completetext
+
+    }
+
 </script>
 <script>
     function myFunction() {
@@ -931,6 +897,7 @@ session_start();
     }
 </script>
 
+<script async data-id="3596" src="https://cdn.widgetwhats.com/script.min.js"></script>
 
 </body>
 </html>
